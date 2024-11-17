@@ -8,7 +8,7 @@ function Footer() {
         {/* Social Media Links */}
         <div className="flex space-x-6 mb-4">
           <a
-            href="https://github.com/yourusername" // Replace with your GitHub link
+            href="https://github.com/itsmeshishir" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition duration-200"
@@ -16,7 +16,7 @@ function Footer() {
             <FaGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername" // Replace with your LinkedIn link
+            href="https://www.linkedin.com/in/shishir-bhandari-9b33b01b7/" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition duration-200"
@@ -24,7 +24,7 @@ function Footer() {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://twitter.com/yourusername" // Replace with your Twitter link
+            href="https://x.com/shishir_vandari" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition duration-200"
@@ -32,21 +32,19 @@ function Footer() {
             <FaTwitter size={24} />
           </a>
           <a
-            href="mailto:your-email@example.com" // Replace with your email
+            href="mailto:contact@bhandarishishir.com.np" 
             className="text-gray-400 hover:text-white transition duration-200"
           >
             <FaEnvelope size={24} />
           </a>
         </div>
 
-        {/* Footer Text */}
         <p className="text-center text-sm text-gray-500 mb-2">
           © {new Date().getFullYear()} Shishir Bhandari. All rights reserved.
         </p>
 
-        {/* Optional GitHub Source Code Link */}
         <a
-          href="https://github.com/yourusername/yourportfolio" // Replace with your repository link
+          href="https://github.com/itsmeshishir/mainportfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="text-center text-sm text-gray-500 hover:underline flex items-center space-x-1"

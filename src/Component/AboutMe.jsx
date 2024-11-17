@@ -1,6 +1,7 @@
 import React from 'react';
 import {  FaReact, FaNodeJs, FaJsSquare, FaVuejs, FaGithub, FaGit } from 'react-icons/fa';
 import { SiTypescript, SiHtml5, SiCss3, SiBootstrap, SiFlutter, SiExpo } from 'react-icons/si';
+import personal from "../assets/personal.png";
 
 function AboutMe() {
   return (
@@ -44,7 +45,7 @@ function AboutMe() {
         {/* Right Side - Profile Image */}
         <div className="flex-1 mt-8 md:mt-0 md:ml-8 flex justify-center">
           <img
-            src="https://vinayaksingh.com/static/media/VinayakSingh.b47f5e7975b80ccbd448.png" 
+            src={personal}
             alt="Profile"
             className="w-full h-full rounded-full object-cover"
           />

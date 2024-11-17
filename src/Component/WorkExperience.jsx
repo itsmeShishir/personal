@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function WorkExperience() {
-  // Data for different roles
   const jobs = [
     {
       id: 1,
@@ -53,26 +52,23 @@ function WorkExperience() {
     },
   ];
 
-  // State to track the selected job
   const [activeJobId, setActiveJobId] = useState(jobs[0].id);
-
-  // Find the active job data based on activeJobId
   const activeJob = jobs.find((job) => job.id === activeJobId);
 
-  return ( 
-    <div className="min-h-screen flex flex-col items-center text-black px-8 py-16" id="experience">
-      <h2 className="text-4xl font-bold mb-12 text-green-400 text-start">Where I've Worked</h2>
+  return (
+    <div className="min-h-screen flex flex-col items-center text-black px-4 py-12 md:px-8 lg:px-16" id="experience">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-green-400">Where I've Worked</h2>
       <div className="flex flex-col md:flex-row max-w-5xl w-full">
         {/* Sidebar for Company List */}
-        <div className="flex flex-row md:flex-col space-y-4 md:space-y-0 md:space-x-0 space-x-4 md:w-1/3 rounded-lg p-4 md:p-6">
+        <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 md:w-1/3 rounded-lg overflow-x-auto">
           {jobs.map((job) => (
             <button
               key={job.id}
               onClick={() => setActiveJobId(job.id)}
-              className={`text-left w-full py-2 px-4 rounded-lg transition-all duration-200 ${
+              className={`w-full text-left py-2 px-4 rounded-lg transition-all duration-200 truncate ${
                 activeJobId === job.id
                   ? 'bg-green-500 text-white font-semibold'
-                  : 'bg-transparent  hover:bg-gray-700 hover:text-white'
+                  : 'bg-gray-100 text-gray-800 hover:bg-green-200 hover:text-green-800'
               }`}
             >
               {job.company}
@@ -81,14 +77,14 @@ function WorkExperience() {
         </div>
 
         {/* Main Content Area for Job Details */}
-        <div className="md:w-2/3 mt-8 md:mt-0 md:ml-8">
-          <h3 className="text-2xl font-semibold">
+        <div className="flex-grow mt-8 md:mt-0 md:ml-8">
+          <h3 className="text-xl sm:text-2xl font-semibold">
             {activeJob.role} <span className="text-green-400">{activeJob.location}</span>
           </h3>
-          <p className="text-gray-900 mt-1">{activeJob.date}</p>
-          <ul className="mt-4 space-y-3 text-gray-900 list-disc list-inside">
+          <p className="text-gray-600 mt-1">{activeJob.date}</p>
+          <ul className="mt-4 space-y-3 text-gray-700 list-disc list-inside">
             {activeJob.responsibilities.map((resp, index) => (
-              <li key={index} className="text-gray-900 leading-relaxed">
+              <li key={index} className="leading-relaxed">
                 {resp}
               </li>
             ))}
